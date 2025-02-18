@@ -1,6 +1,7 @@
 from platzky_google_tag_manager.entrypoint import process
 from unittest.mock import Mock
 
+
 def test_renders_head_code_with_gtm_id():
     app = Mock()
     plugin_config = {"ID": "GTM-XXXX"}
@@ -18,6 +19,7 @@ def test_renders_head_code_with_gtm_id():
     )
     assert result == app
 
+
 def test_renders_body_code_with_gtm_id():
     app = Mock()
     plugin_config = {"ID": "GTM-XXXX"}
@@ -33,6 +35,7 @@ def test_renders_body_code_with_gtm_id():
     """
     )
     assert result == app
+
 
 def test_handles_empty_gtm_id():
     app = Mock()
